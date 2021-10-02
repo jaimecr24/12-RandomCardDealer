@@ -10,31 +10,26 @@ body {
 
 .card {
   background-color: white;
-  width: 50vh;
-  height: 80vh;
+  width: 25em;
+  height: 36em;
   border-radius: 5%;
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .symbol {
-  font-size: 400%;
-  width: 10vh;
-  height: 15vh;
-}
-
-.card :first-child {
-  margin-top: 5%;
-  margin-left: 10%;
+  font-size: 600%;
 }
 
 .card :nth-child(2) {
-  font-size: 700%;
-  margin-top: 15%;
-  width: 90%;
+  font-size: 900%;
   text-align: center;
 }
 
 .card :nth-child(3) {
-  margin-top: 30%;
-  margin-left: 75%;
+  text-align: end;
 }
