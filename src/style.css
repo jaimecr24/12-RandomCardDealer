@@ -1,1 +1,40 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  width: 50vh;
+  height: 80vh;
+  border-radius: 5%;
+  display: flex;
+}
+
+.symbol {
+  font-size: 400%;
+  width: 10vh;
+  height: 15vh;
+}
+
+.card :first-child {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.card :nth-child(2) {
+  font-size: 700%;
+  margin-top: 15%;
+  width: 90%;
+  text-align: center;
+}
+
+.card :nth-child(3) {
+  margin-top: 30%;
+  margin-left: 75%;
+}
