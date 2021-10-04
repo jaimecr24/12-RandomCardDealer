@@ -9,7 +9,7 @@ window.onload = function() {
   //write your code here
 
   let symbols = { 0: "♦", 1: "♥", 2: "♠", 3: "♣" };
-  let colors = { 0: "black", 1: "red", 2: "red", 4: "black" };
+  let colors = { 0: "red", 1: "red", 2: "black", 3: "black" };
   let i = Math.floor(Math.random() * 4);
   let n = Math.floor(Math.random() * 12) + 1;
 
