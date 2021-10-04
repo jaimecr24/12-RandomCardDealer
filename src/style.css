@@ -31,5 +31,6 @@ body {
 }
 
 .card :nth-child(3) {
-  text-align: end;
+  text-align: start;
+  transform: rotate(-180deg);
 }
