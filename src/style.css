@@ -5,20 +5,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
 }
 
 .card {
   background-color: white;
-  width: 25em;
-  height: 36em;
   border-radius: 5%;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding: 0 20px 0 20px;
 }
 
 .symbol {
@@ -33,4 +31,28 @@ body {
 .card :nth-child(3) {
   text-align: start;
   transform: rotate(-180deg);
+}
+
+.mybtn button {
+  margin-top: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.myinputs {
+  color: yellow;
+  font-size: large;
+  margin-top: 20px;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 0;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
 }

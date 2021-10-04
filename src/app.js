@@ -5,9 +5,31 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
+let card = document.querySelector(".card");
+let btn = document.querySelector(".mybtn");
+let nIntervalId = setInterval(generateCard, 10000); //Change card every 10 seconds.
+let inputw = document.querySelector("#wcard");
+let inputh = document.querySelector("#hcard");
 
+window.onload = generateCard;
+btn.addEventListener("click", generateCard); //Change card onclick event.
+
+inputw.addEventListener("input", function(event) {
+  if (inputw.validity.valid)
+    card.setAttribute(
+      "style",
+      `width:${inputw.value}px; height:${card.clientHeight}px;`
+    );
+});
+inputh.addEventListener("input", function(event) {
+  if (inputh.validity.valid)
+    card.setAttribute(
+      "style",
+      `width:${card.clientWidth}px;height:${inputh.value}px;`
+    );
+});
+
+function generateCard() {
   let symbols = { 0: "♦", 1: "♥", 2: "♠", 3: "♣" };
   let colors = { 0: "red", 1: "red", 2: "black", 3: "black" };
   let letters = { 11: "J", 12: "Q", 13: "K" };
@@ -20,4 +42,4 @@ window.onload = function() {
   document.querySelector(".number").innerHTML = `<span style="color:${
     colors[i]
   }">${n < 11 ? n : letters[n]}</span>`;
-};
+}

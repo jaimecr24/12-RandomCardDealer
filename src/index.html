@@ -13,10 +13,35 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="card">
-      <div class="symbol"><span>♥</span></div>
-      <div class="number"><span>12</span></div>
-      <div class="symbol"><span>♥</span></div>
+    <div class="card" style="width:400px; height:600px">
+      <div class="symbol"><span></span></div>
+      <div class="number"><span></span></div>
+      <div class="symbol"><span></span></div>
+    </div>
+    <div class="mybtn">
+      <button name="button">Click me</button>
+    </div>
+    <div class="myinputs">
+      <label for="wcard">Width (300-900):</label>
+      <input
+        type="text"
+        id="wcard"
+        name="wcard"
+        placeholder="400"
+        pattern="^([3-8][0-9][0-9]|900)$"
+        size="3"
+        required
+      />
+      <label for="hcard">Height (500-800):</label>
+      <input
+        type="text"
+        id="hcard"
+        name="hcard"
+        placeholder="600"
+        pattern="^([5-7][0-9][0-9]|800)$"
+        size="3"
+        required
+      />
     </div>
   </body>
 </html>
