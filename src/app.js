@@ -7,26 +7,22 @@ import "./assets/img/4geeks.ico";
 
 let card = document.querySelector(".card");
 let btn = document.querySelector(".mybtn");
-let nIntervalId = setInterval(generateCard, 10000); //Change card every 10 seconds.
 let inputw = document.querySelector("#wcard");
 let inputh = document.querySelector("#hcard");
 
 window.onload = generateCard;
 btn.addEventListener("click", generateCard); //Change card onclick event.
 
+let nIntervalId = setInterval(generateCard, 10000); //Change card every 10 seconds.
+
 inputw.addEventListener("change", function(event) {
-  if (inputw.validity.valid)
-    card.setAttribute(
-      "style",
-      `width:${inputw.value}px; height:${card.clientHeight}px;`
-    );
+  //Change width card.
+  if (inputw.validity.valid) card.style.width = inputw.value + "px";
 });
+
 inputh.addEventListener("change", function(event) {
-  if (inputh.validity.valid)
-    card.setAttribute(
-      "style",
-      `width:${card.clientWidth}px;height:${inputh.value}px;`
-    );
+  //Change height card.
+  if (inputh.validity.valid) card.style.height = inputh.value + "px";
 });
 
 function generateCard() {
